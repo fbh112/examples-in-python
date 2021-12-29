@@ -110,10 +110,10 @@ class RegressionTest(object):
     test_rows = random.sample(self.houses.index.tolist(),
                   int(round(len(self.houses) * holdout)))
     train_rows = set(range(len(self.houses))) - set(test_rows)
-    df_test = self.houses.ix[test_rows]
+    df_test = self.houses.loc[test_rows]
     df_train = self.houses.drop(test_rows)
 
-    train_values = self.values.ix[train_rows]
+    train_values = self.values.loc[train_rows]
     regression = Regression()
     regression.set_data(houses=df_train, values=train_values)
 

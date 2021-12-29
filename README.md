@@ -38,7 +38,11 @@ Install system packages
 Install remaining packages in virtualenv
 
     virtualenv -p `which python3` venv35
-    venv35/bin/pip3 install -r requirements35.txt
+    source venv35/bin/activate
+    venv35/bin/pip3 install -r requirements38.txt
+
+To deactive the virtualenv
+    deactivate
 
 ## MS Windows, using Python 2.7, anaconda
 
